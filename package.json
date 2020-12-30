@@ -3,16 +3,21 @@
   "description": "A lightweight react tooltips library",
   "author": "Phil Steinke <phil@tgrrr.com> (http://philsteinke.com)",
   "homepage": "https://philsteinke.com",
-  "keywords": ["react", "postCss"],
+  "keywords": [
+    "postcss",
+    "react",
+    "react-component",
+    "react-tooltip",
+    "tooltip"
+  ],
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "license": "MIT",
   "private": true,
-    "dependencies": {
+  "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
@@ -20,9 +25,9 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
-    "rollup": "^2.35.1",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "rollup": "^2.35.1"
   }
 }
