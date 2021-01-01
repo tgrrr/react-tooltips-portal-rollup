@@ -2,7 +2,7 @@
   "name": "react-tooltips",
   "description": "A lightweight react tooltips library",
   "author": "Phil Steinke <phil@tgrrr.com> (http://philsteinke.com)",
-  "homepage": "https://philsteinke.com",
+  "homepage": "https://github.com/tgrrr/tooltips#readme",
   "keywords": [
     "postcss",
     "react",
@@ -17,6 +17,13 @@
   },
   "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgrrr/tooltips.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tgrrr/tooltips/issues"
+  },  
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -28,7 +35,9 @@
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
-    "rollup": "^2.35.1"
-    "rollup-plugin-analyzer": "^4.0.0"
+    "postcss": "^8.2.2",
+    "rollup": "^2.35.1",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-postcss": "^4.0.0"
   }
 }

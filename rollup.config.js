@@ -1,5 +1,7 @@
-import babel from '@rollup/plugin-babel';
 const analyze = require('rollup-plugin-analyzer')
+import babel from '@rollup/plugin-babel';
+import path from 'path';
+import postcss from 'rollup-plugin-postcss';
 
 const config = {
 	input: 'src/index.js',
@@ -12,14 +14,20 @@ const config = {
 		'react',
 		],
 	plugins: [
+		analyze({
+			summaryOnly: true,
+		}),
 		babel({ 
 			babelHelpers: 'bundled',
 			exclude: 'node_modules/**'
 		}),
-		analyze({
-			summaryOnly: true,
-		})		
-	]
+		postcss({
+			extract: true,
+			extract: path.resolve('dist/style.css'),
+			config: {
+                path: './postcss.config.js'
+            },
+		})],
 };
 
 export default config;
