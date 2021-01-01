@@ -12,3 +12,13 @@ $ yarn build
 > created dist/bundle.js in 556ms
 > ✨  Done in 1.04s.
 ```
+
+## Bundle size
+
+-----------------------------
+Rollup File Analysis
+-----------------------------
+bundle size:    0 Byte
+original size:  82 Bytes
+code reduction: 100 %
+module count:   1
