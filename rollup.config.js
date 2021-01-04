@@ -2,6 +2,7 @@ import analyze from 'rollup-plugin-analyzer';
 import babel from '@rollup/plugin-babel';
 import path from 'path';
 import postcss from 'rollup-plugin-postcss';
+import { terser } from 'rollup-plugin-terser';
 
 const config = {
 	input: 'src/index.js',
@@ -27,7 +28,9 @@ const config = {
 			config: {
                 path: './postcss.config.js'
             },
-		})],
+		}),
+		terser()
+	]
 };
 
 export default config;
