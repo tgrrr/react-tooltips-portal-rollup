@@ -1,4 +1,4 @@
-const analyze = require('rollup-plugin-analyzer')
+import analyze from 'rollup-plugin-analyzer';
 import babel from '@rollup/plugin-babel';
 import path from 'path';
 import postcss from 'rollup-plugin-postcss';

@@ -13,7 +13,8 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "watch": "rollup -c rollup.config.dev.js -w"
   },
   "license": "MIT",
   "private": true,
@@ -23,8 +24,8 @@
   },
   "bugs": {
     "url": "https://github.com/tgrrr/tooltips/issues"
-  },  
-  "dependencies": {
+  },
+  "peerDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
@@ -35,9 +36,12 @@
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-replace": "^2.3.4",
     "postcss": "^8.2.2",
     "rollup": "^2.35.1",
     "rollup-plugin-analyzer": "^4.0.0",
-    "rollup-plugin-postcss": "^4.0.0"
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-serve": "^1.1.0"
   }
 }
