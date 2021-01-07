@@ -4,6 +4,7 @@ import livereload from 'rollup-plugin-livereload';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
+import postcss from 'rollup-plugin-postcss';
 
 const dist = 'dist'
 const NODE_ENV = process.env.NODE_ENV || 'development';
@@ -25,6 +26,11 @@ const config = {
 		nodeResolve({
 			extensions: ['.js', '.jsx']
 		 }),
+		postcss({
+			config: {
+				path: 'postcss.config.js'
+			},
+		}),
 		babel({
 			babelHelpers: 'bundled',
 		}),
