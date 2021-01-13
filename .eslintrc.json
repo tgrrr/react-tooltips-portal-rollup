@@ -1,0 +1,103 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "airbnb/hooks"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "arrow-parens": 0,
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "implicit-arrow-linebreak": 0,
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ],
+        "import/extensions": 0,
+        "import/named": 2,
+        "import/no-unresolved": "off",
+        "indent": [
+            "error",
+            4
+        ],
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ],
+        "max-len": 0,
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "no-nested-ternary": 0,
+        "no-unused-expressions": [
+            2,
+            {
+                "allowShortCircuit": true,
+                "allowTernary": true
+            }
+        ],
+        "quotes": [
+            "error",
+            "single",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "spaced-comment": [
+            "error",
+            "always",
+            {
+                "line": {
+                    "markers": [
+                        "/"
+                    ],
+                    "exceptions": [
+                        "-",
+                        "+",
+                        "/"
+                    ]
+                }
+            }
+        ],
+        "react/destructuring-assignment": 2,
+        "react/jsx-filename-extension": 0,
+        "react/jsx-sort-props": 2,
+        "react/prop-types": 0,
+        "react/sort-prop-types": 2,
+        "react/jsx-props-no-spreading": 0,
+        "no-shadow": "off",
+        "no-underscore-dangle": 0,
+        "yoda": 2,
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"]
+    }
+}

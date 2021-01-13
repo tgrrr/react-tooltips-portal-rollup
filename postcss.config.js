@@ -1,6 +1,5 @@
 module.exports = {
-	minimize: true,
-	modules: true,
-	extract: true,
-	extract: 'dist/style.css',
+    minimize: true,
+    modules: true,
+    extract: 'dist/style.css',
 }

@@ -6,44 +6,44 @@ import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
 import postcss from 'rollup-plugin-postcss';
 
-const dist = 'dist'
+const dist = 'dist';
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 const config = {
-	input: 'src/Demo/index.js',
-	output: {
-		file: `${dist}/demo.bundle.js`,
-		exports: 'named',
-		format: 'iife',
-	},
-	plugins: [
-		commonjs({
-			include: ['node_modules/**']
-		}),
-		replace({
-			'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
-		}),
-		nodeResolve({
-			extensions: ['.js', '.jsx']
-		 }),
-		postcss({
-			config: {
-				path: 'postcss.config.js'
-			},
-		}),
-		babel({
-			babelHelpers: 'bundled',
-		}),
-		serve({
-			open: true,
-			verbose: true,
-			contentBase: ['', dist],
-			historyApiFallback: true,
-			host: 'localhost',
-			port: 8080
-		}),
-		livereload({ watch: dist }),
-	],
+    input: 'src/Demo/index.js',
+    output: {
+        file: `${dist}/demo.bundle.js`,
+        exports: 'named',
+        format: 'iife',
+    },
+    plugins: [
+        commonjs({
+            include: ['node_modules/**'],
+        }),
+        replace({
+            'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
+        }),
+        nodeResolve({
+            extensions: ['.js', '.jsx'],
+        }),
+        postcss({
+            config: {
+                path: 'postcss.config.js',
+            },
+        }),
+        babel({
+            babelHelpers: 'bundled',
+        }),
+        serve({
+            open: true,
+            verbose: true,
+            contentBase: ['', dist],
+            historyApiFallback: true,
+            host: 'localhost',
+            port: 8080,
+        }),
+        livereload({ watch: dist }),
+    ],
 };
 
 export default config;
