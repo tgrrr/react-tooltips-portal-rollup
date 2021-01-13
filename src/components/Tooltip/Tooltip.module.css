@@ -1,13 +1,13 @@
 .Tooltip {
-	width: 100%;
-	height: auto;
-	border: 1px solid midnightblue;
-	padding: 10px;
-	background-color: lightcoral;
+    width: 100%;
+    height: auto;
+    border: 1px solid midnightblue;
+    padding: 10px;
+    background-color: lightcoral;
   }
 /* FIXME: combine into Tooltips css */
 .popover {
-	position: "absolute";
-	width: 200px;
-	transform: "translate(-100px, -100%)";
+    position: "absolute";
+    width: 200px;
+    transform: "translate(-100px, -100%)";
 }

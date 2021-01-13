@@ -3,4 +3,6 @@ import Button from './Button/Button';
 import Portal from './Portal/Portal';
 import Tooltip from './Tooltip';
 
-export { Card, Button, Portal, Tooltip };
+export {
+    Card, Button, Portal, Tooltip,
+};

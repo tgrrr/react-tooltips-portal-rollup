@@ -1,12 +1,9 @@
 import React from 'react';
-import DemoGrid from '../Demo/DemoGrid/DemoGrid';
+import DemoGrid from './DemoGrid/DemoGrid';
 import './index.css';
 
-const App = () => {
-
-	return (
-		<DemoGrid />
-	)
-}
+const App = () => (
+    <DemoGrid />
+);
 
 export default App;

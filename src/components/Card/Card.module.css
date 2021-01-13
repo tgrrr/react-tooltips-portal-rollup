@@ -1,9 +1,9 @@
 .card {
-	background-color: white;
-	border-radius: 5px;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	overflow: "hidden";
-	padding: .5rem;
-	transition: 0.3s;
-	max-width: 800px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    overflow: "hidden";
+    padding: .5rem;
+    transition: 0.3s;
+    max-width: 800px;
 }

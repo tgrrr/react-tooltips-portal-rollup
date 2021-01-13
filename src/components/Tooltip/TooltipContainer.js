@@ -1,32 +1,28 @@
-import React, { useEffect, useRef } from 'react';
-import Portal from '../../components/Portal/Portal';
-import Tooltip from '../Tooltip/Tooltip.js';
+import React, { useState } from 'react';
+import Portal from '../Portal/Portal';
+import Tooltip from './Tooltip.js';
 
 const TooltipContainer = ({
-	children,
-	content,
-	}) => {
-	return(
-		<>
-			{/* Target: */}
-			<div ref={hoverRef}>
-				<div ref={coordsRef}>
-					{children}
-				</div>
-			</div>
+    children,
+    content,
+}) => {
+    const [isShow] = useState(false);
 
-			{isShow && (
-			{/* Tooltip: */}
-				<Portal>
-					<Tooltip
-						coords={coords}
-					>
-						{content}
-					</Tooltip>
-				</Portal>
-			)}
-		</>
-	);
+    return (
+        <>
+            {/* Target: */}
+            {children}
+
+            {/* Tooltip: */}
+            {isShow && (
+                <Portal>
+                    <Tooltip>
+                        {content}
+                    </Tooltip>
+                </Portal>
+            )}
+        </>
+    );
 };
 
 export default TooltipContainer;
