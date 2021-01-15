@@ -12,11 +12,13 @@ const TooltipContents = () => (
 );
 
 // Card wrapper to test that tooltip works outside of current parent node
-const DemoTooltip = () => (
+const DemoTooltip = ({ position = '' }) => (
     <Card>
         <Tooltip content={<TooltipContents />}>
             <button type='button'>
                 Click me
+                <br />
+                {position}
             </button>
         </Tooltip>
     </Card>
@@ -24,41 +26,39 @@ const DemoTooltip = () => (
 
 const DemoGrid = () => (
     <>
-        <div className={styles.container}>
-            <div className={cx(styles.row, styles.top)}>
-                <div className={cx(styles.col, styles.left)}>
-                    <DemoTooltip />
-                </div>
-                <div className={cx(styles.col, styles.center)}>
-                    <DemoTooltip />
-                </div>
-                <div className={cx(styles.col, styles.right)}>
-                    <DemoTooltip />
-                </div>
+        <div className={cx(styles.row, styles.top)}>
+            <div className={cx(styles.col, styles.left)}>
+                <DemoTooltip position='Top Left' />
             </div>
-
-            <div className={cx(styles.row, styles.middle)}>
-                <div className={cx(styles.col, styles.left)}>
-                    <DemoTooltip />
-                </div>
-                <div className={cx(styles.col, styles.center)}>
-                    <DemoTooltip />
-                </div>
-                <div className={cx(styles.col, styles.right)}>
-                    <DemoTooltip />
-                </div>
+            <div className={cx(styles.col, styles.center)}>
+                <DemoTooltip position='Top Centre' />
             </div>
+            <div className={cx(styles.col, styles.right)}>
+                <DemoTooltip position='Top Right' />
+            </div>
+        </div>
 
-            <div className={cx(styles.row, styles.bottom)}>
-                <div className={cx(styles.col, styles.left)}>
-                    <DemoTooltip />
-                </div>
-                <div className={cx(styles.col, styles.center)}>
-                    <DemoTooltip />
-                </div>
-                <div className={cx(styles.col, styles.right)}>
-                    <DemoTooltip />
-                </div>
+        <div className={cx(styles.row, styles.middle)}>
+            <div className={cx(styles.col, styles.left)}>
+                <DemoTooltip position='Middle Left' />
+            </div>
+            <div className={cx(styles.col, styles.center)}>
+                <DemoTooltip position='Middle Centre' />
+            </div>
+            <div className={cx(styles.col, styles.right)}>
+                <DemoTooltip position='Middle Right' />
+            </div>
+        </div>
+
+        <div className={cx(styles.row, styles.bottom)}>
+            <div className={cx(styles.col, styles.left)}>
+                <DemoTooltip position='Bottom Left' />
+            </div>
+            <div className={cx(styles.col, styles.center)}>
+                <DemoTooltip position='Bottom Centre' />
+            </div>
+            <div className={cx(styles.col, styles.right)}>
+                <DemoTooltip position='Bottom Right' />
             </div>
         </div>
     </>
